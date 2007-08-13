@@ -1,0 +1,12 @@
+diff -ruN compizconfig-backend-kconfig-0.5.2./settings-backend/Makefile.am compizconfig-backend-kconfig-0.5.2/settings-backend/Makefile.am
+--- compizconfig-backend-kconfig-0.5.2./settings-backend/Makefile.am	2007-08-12 22:23:41.000000000 +0200
++++ compizconfig-backend-kconfig-0.5.2/settings-backend/Makefile.am	2007-08-14 00:00:34.516318770 +0200
+@@ -5,7 +5,7 @@
+ libkconfig_la_LIBADD = $(CCS_LIBS) $(LIB_KDECORE)
+ libkconfig_la_SOURCES = kconfig_backend.cpp
+ backenddir = $(BACKENDDIR)/backends
+-KDE_CXXFLAGS = $(CCS_CFLAGS)
++CXXFLAGS = $(CCS_CFLAGS)
+ 
+ METASOURCES = AUTO
+ 
