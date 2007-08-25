@@ -6,7 +6,7 @@ diff -ruN compizconfig-backend-kconfig-0.5.2./settings-backend/Makefile.am compi
  libkconfig_la_SOURCES = kconfig_backend.cpp
  backenddir = $(BACKENDDIR)/backends
 -KDE_CXXFLAGS = $(CCS_CFLAGS)
-+CXXFLAGS = $(CCS_CFLAGS)
++AM_CXXFLAGS = $(CCS_CFLAGS)
  
  METASOURCES = AUTO
  
