@@ -13,7 +13,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	kdelibs-devel
 BuildRequires:	libcompizconfig-devel >= %{version}
-BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +31,6 @@ przechowywania konfiguracji compiza i zapewnia intergrację ze
 %patch0 -p1
 
 %build
-%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -46,11 +44,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv -f $RPM_BUILD_ROOT%{_libdir}/compizconfig/backends/libkconfig{,.so}
+rm -f $RPM_BUILD_ROOT%{_libdir}/compizconfig/backends/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/compizconfig/backends/*.so
+%attr(755,root,root) %{_libdir}/compizconfig/backends/libkconfig.so
