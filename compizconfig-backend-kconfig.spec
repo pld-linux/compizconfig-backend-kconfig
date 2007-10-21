@@ -1,13 +1,12 @@
 Summary:	The kconfig backend for CompizConfig
 Summary(pl.UTF-8):	Backend kconfig dla CompizConfiga
 Name:		compizconfig-backend-kconfig
-Version:	0.5.2
+Version:	0.6.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	e95ced3432cc95850f9bfd28013dc70f
-Patch0:		%{name}-am.patch
+# Source0-md5:	fe4ad9760b50a9e65ff9c0ec84f0395b
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -28,7 +27,6 @@ przechowywania konfiguracji compiza i zapewnia intergrację ze
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__aclocal}
