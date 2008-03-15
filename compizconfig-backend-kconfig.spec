@@ -19,12 +19,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The kconfig backend for CompizConfig. It uses the KDE configuration
-system to store the compiz configuration and provides integration
-into the KDE desktop environment.
+system to store the compiz configuration and provides integration into
+the KDE desktop environment.
 
 %description -l pl.UTF-8
 Backend kconfig dla CompizConfiga. Używa systemu konfiguracji KDE do
-przechowywania konfiguracji compiza i zapewnia intergrację ze
+przechowywania konfiguracji compiza i zapewnia integrację ze
 środowiskiem KDE.
 
 %prep
