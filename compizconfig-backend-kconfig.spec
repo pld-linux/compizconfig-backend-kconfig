@@ -1,12 +1,12 @@
 Summary:	The kconfig backend for CompizConfig
 Summary(pl.UTF-8):	Backend kconfig dla CompizConfiga
 Name:		compizconfig-backend-kconfig
-Version:	0.7.4
+Version:	0.7.6
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	7d241f36648866de6b0c13dc6a8c468f
+# Source0-md5:	27fe89a9c8f672d5ce21f5326ba636b9
 URL:		http://forum.compiz-fusion.org/
 Patch0:		%{name}-am.patch
 Patch1:		kde-ac260-lt.patch
