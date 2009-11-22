@@ -12,9 +12,11 @@ Patch0:		%{name}-am.patch
 Patch1:		kde-ac260-lt.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	kdelibs-devel
+BuildRequires:	kde4-kde3support-devel
 BuildRequires:	libcompizconfig-devel >= %{version}
 BuildRequires:	pkgconfig
+BuildRequires:	qt-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,7 +39,8 @@ przechowywania konfiguracji compiza i zapewnia integrację ze
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--includedir=%{_includedir}/kde3
 %{__make}
 
 %install
